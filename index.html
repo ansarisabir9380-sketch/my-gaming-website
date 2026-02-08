@@ -1,9 +1,9 @@
-<title>My Gaming Zone 🔥 Updated</title><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Gaming Zone | Free Online Games</title>
+  <title>My Gaming Zone 🔥 Updated</title>
 
   <meta name="description" content="Play free online action, racing and puzzle games. My Gaming Zone – best gaming website." />
   <meta name="keywords" content="gaming website, online games, action games, racing games, puzzle games" />
@@ -14,6 +14,7 @@
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
+      scroll-behavior: smooth;
     }
     header {
       background: linear-gradient(90deg, #7c3aed, #22d3ee);
@@ -21,6 +22,11 @@
       text-align: center;
       font-size: 28px;
       font-weight: bold;
+      animation: neon 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes neon {
+      0% { text-shadow: 0 0 5px #7c3aed, 0 0 10px #7c3aed; }
+      100% { text-shadow: 0 0 20px #22d3ee, 0 0 30px #22d3ee; }
     }
     nav {
       display: flex;
@@ -33,22 +39,15 @@
       color: #e5e7eb;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
-    nav a:hover {
-      color: #22d3ee;
-    }
+    nav a:hover { color: #22d3ee; }
     .hero {
       padding: 60px 20px;
       text-align: center;
     }
-    .hero h1 {
-      font-size: 36px;
-    }
-    .hero p {
-      color: #94a3b8;
-      max-width: 600px;
-      margin: auto;
-    }
+    .hero h1 { font-size: 36px; animation: neon 1.5s ease-in-out infinite alternate; }
+    .hero p { color: #94a3b8; max-width: 600px; margin: auto; }
     .games {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -60,7 +59,9 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
     }
+    .card:hover { transform: scale(1.05); }
     .card button {
       background: #7c3aed;
       border: none;
@@ -69,27 +70,18 @@
       color: white;
       cursor: pointer;
       font-weight: bold;
+      transition: background 0.3s, color 0.3s;
     }
-    .card button:hover {
-      background: #22d3ee;
-      color: #020617;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #020617;
-      color: #64748b;
-    }
+    .card button:hover { background: #22d3ee; color: #020617; }
+    footer { text-align: center; padding: 15px; background: #020617; color: #64748b; }
   </style>
 </head>
-
 <body>
-
 <header>🎮 My Gaming Zone</header>
-
 <nav>
   <a href="#">Home</a>
   <a href="#games">Games</a>
+  <a href="#gta">GTA</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -100,30 +92,50 @@
 
 <section id="games" class="games">
   <div class="card">
-    <h3>Action Game</h3>
-    <p>Fast aur powerful action games.</p>
-    <button>Play</button>
+    <h3>GTA Gameplay</h3>
+    <p>Watch epic GTA missions and open-world fun.</p>
+    <button onclick="document.getElementById('gta-video').scrollIntoView({behavior:'smooth'})">Play</button>
   </div>
   <div class="card">
-    <h3>Racing Game</h3>
-    <p>Speed lovers ke liye racing fun.</p>
-    <button>Play</button>
+    <h3>Browser Racing</h3>
+    <p>Lightweight racing game – play instantly.</p>
+    <iframe src="https://www.crazygames.com/embed/madalin-cars-multiplayer" style="width:100%;height:200px;border:0;border-radius:12px;"></iframe>
   </div>
   <div class="card">
     <h3>Puzzle Game</h3>
-    <p>Mind sharp karne wale puzzles.</p>
-    <button>Play</button>
+    <p>Mind sharp karne ke liye fun puzzle.</p>
+    <iframe src="https://www.crazygames.com/embed/2048" style="width:100%;height:200px;border:0;border-radius:12px;"></iframe>
   </div>
 </section>
 
+<section id="gta" style="padding:40px;">
+  <h2>🔥 GTA Zone</h2>
+  <p>Gameplay, cheats aur guides – sab ek jagah.</p>
+  <h3>🎥 Gameplay</h3>
+  <div id="gta-video" style="max-width:600px;margin:auto;">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QkkoHAzjnUs" title="GTA Gameplay" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <h3>💣 Popular Cheats</h3>
+  <ul>
+    <li>HESOYAM – Health + Money</li>
+    <li>AEZAKMI – No Police</li>
+    <li>ROCKETMAN – Jetpack</li>
+  </ul>
+</section>
+
 <section id="contact" style="padding:40px;text-align:center;">
-  <h2>Contact</h2>
-  <p>Email: yourname@gmail.com</p>
+  <h2>Contact Me</h2>
+  <form style="max-width:400px;margin:auto;display:grid;gap:10px;">
+    <input type="text" placeholder="Your Name" required style="padding:10px;border-radius:8px;border:none;" />
+    <input type="email" placeholder="Your Email" required style="padding:10px;border-radius:8px;border:none;" />
+    <textarea placeholder="Your Message" required style="padding:10px;border-radius:8px;border:none;"></textarea>
+    <button type="submit" style="padding:10px;border-radius:10px;border:none;background:#7c3aed;color:white;font-weight:bold;">Send</button>
+  </form>
+  <p style="margin-top:15px;">Email: ansarisabir9380@gmail.com</p>
 </section>
 
 <footer>
   © 2026 My Gaming Zone
 </footer>
-
 </body>
 </html>
