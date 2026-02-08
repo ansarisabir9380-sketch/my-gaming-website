@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Gaming Zone 🔥 Updated</title>
+  <title>My Gaming Zone 🔥 Ultimate</title>
 
   <meta name="description" content="Play free online action, racing and puzzle games. My Gaming Zone – best gaming website." />
   <meta name="keywords" content="gaming website, online games, action games, racing games, puzzle games" />
@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #e5e7eb;
       scroll-behavior: smooth;
     }
@@ -20,7 +20,7 @@
       background: linear-gradient(90deg, #7c3aed, #22d3ee);
       padding: 20px;
       text-align: center;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       animation: neon 1.5s ease-in-out infinite alternate;
     }
@@ -74,10 +74,13 @@
     }
     .card button:hover { background: #22d3ee; color: #020617; }
     footer { text-align: center; padding: 15px; background: #020617; color: #64748b; }
+    .dark-mode { background: #0f172a; color: #e5e7eb; }
+    #toggle-dark { position: fixed; top: 15px; right: 15px; padding:8px 12px; border:none; border-radius:8px; background:#7c3aed; color:white; cursor:pointer; }
   </style>
 </head>
 <body>
-<header>🎮 My Gaming Zone</header>
+<button id="toggle-dark">🌙 Dark/Light</button>
+<header>🎮 My Gaming Zone Ultimate</header>
 <nav>
   <a href="#">Home</a>
   <a href="#games">Games</a>
@@ -106,6 +109,10 @@
     <p>Mind sharp karne ke liye fun puzzle.</p>
     <iframe src="https://www.crazygames.com/embed/2048" style="width:100%;height:200px;border:0;border-radius:12px;"></iframe>
   </div>
+  <div class="card">
+    <h3>Coming Soon Game</h3>
+    <p>Stay tuned for new games launching soon!</p>
+  </div>
 </section>
 
 <section id="gta" style="padding:40px;">
@@ -121,14 +128,20 @@
     <li>AEZAKMI – No Police</li>
     <li>ROCKETMAN – Jetpack</li>
   </ul>
+  <h3>🏆 Mini Leaderboard</h3>
+  <ol>
+    <li>Player1 – 5000 pts</li>
+    <li>Player2 – 4200 pts</li>
+    <li>Player3 – 3800 pts</li>
+  </ol>
 </section>
 
 <section id="contact" style="padding:40px;text-align:center;">
-  <h2>Contact Me</h2>
-  <form style="max-width:400px;margin:auto;display:grid;gap:10px;">
-    <input type="text" placeholder="Your Name" required style="padding:10px;border-radius:8px;border:none;" />
-    <input type="email" placeholder="Your Email" required style="padding:10px;border-radius:8px;border:none;" />
-    <textarea placeholder="Your Message" required style="padding:10px;border-radius:8px;border:none;"></textarea>
+  <h2>Contact / Feedback</h2>
+  <form style="max-width:400px;margin:auto;display:grid;gap:10px;" action="https://formspree.io/f/moqrlvwj" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required style="padding:10px;border-radius:8px;border:none;" />
+    <input type="email" name="_replyto" placeholder="Your Email" required style="padding:10px;border-radius:8px;border:none;" />
+    <textarea name="message" placeholder="Your Message" required style="padding:10px;border-radius:8px;border:none;"></textarea>
     <button type="submit" style="padding:10px;border-radius:10px;border:none;background:#7c3aed;color:white;font-weight:bold;">Send</button>
   </form>
   <p style="margin-top:15px;">Email: ansarisabir9380@gmail.com</p>
@@ -137,5 +150,14 @@
 <footer>
   © 2026 My Gaming Zone
 </footer>
+
+<script>
+  // Dark / Light mode toggle
+  const toggle = document.getElementById('toggle-dark');
+  toggle.addEventListener('click', ()=> {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
 </body>
 </html>
